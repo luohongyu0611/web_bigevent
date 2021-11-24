@@ -23,7 +23,7 @@ $(function() {
         // 监听注册表单的提交事件
     $('#form_reg').on('submit', function(e) {
         e.preventDefault()
-        $.post('http://api-breakingnews-web.itheima.net/api/reguser', {
+        $.post('/api/reguser', {
                 username: $('#form_reg [name=username]').val(),
                 password: $('#form_reg [name=password]').val()
             },
@@ -39,7 +39,7 @@ $(function() {
     $('#form_login').submit(function(e) {
         e.preventDefault()
         $.ajax({
-            url: 'http://api-breakingnews-web.itheima.net/api/login',
+            url: '/api/login',
             method: 'post',
             data: $(this).serialize(),
             success: function(res) {
